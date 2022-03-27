@@ -1,0 +1,28 @@
+.nav {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  color: var(--colorSecondaryLight);
+  background-color: var(--colorSecondaryShade);
+}
+
+.container {
+  height: 100%;
+  width: auto;
+}
+
+.nav {
+  ul {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+}

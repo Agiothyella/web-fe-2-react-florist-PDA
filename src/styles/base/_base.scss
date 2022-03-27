@@ -1,0 +1,56 @@
+@use "../variables/static";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: static.$bpLargest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: var(--fontGeneral);
+  color: var(--colorFontDarker);
+  background-color: var(--colorPrimaryShade);
+}
+
+input,
+textarea {
+  outline: none;
+
+  border: 1px solid var(--colorFontLight);
+  border-radius: 2px;
+
+  &:focus {
+    border: 1px solid var(--colorFontGrey);
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: 2px solid var(--colorSecondaryShade);
+}
+
+img {
+  border-radius: 2px;
+}

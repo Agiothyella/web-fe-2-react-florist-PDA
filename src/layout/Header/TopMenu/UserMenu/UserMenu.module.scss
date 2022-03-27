@@ -1,0 +1,76 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  gap: 2.4rem;
+}
+
+.menu {
+  a {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  svg {
+    fill: var(--colorDark);
+  }
+}
+
+.name {
+  gap: 0.6rem;
+}
+
+.name {
+  svg {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  span {
+    max-width: 12rem;
+    font-size: inherit;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: all 0.1s;
+  }
+}
+
+.name {
+  &:hover,
+  &:active {
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cart {
+  position: relative;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.cart {
+  svg {
+    position: relative;
+    height: 2.4rem;
+    width: 2.4rem;
+
+    z-index: 10;
+  }
+}
+
+.cart {
+  &:hover,
+  &:active {
+  }
+}

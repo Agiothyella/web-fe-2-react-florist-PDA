@@ -1,0 +1,10 @@
+.sect {
+  padding-bottom: 2.4rem;
+  gap: 4.8rem;
+}
+
+.sect {
+  .cont {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

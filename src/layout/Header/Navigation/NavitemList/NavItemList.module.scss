@@ -1,0 +1,36 @@
+.list {
+  height: 100%;
+  width: 100%;
+}
+
+.list {
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+.list {
+  a {
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colorFontDarker);
+      background-color: var(--colorPrimary);
+      text-decoration: none;
+    }
+  }
+}

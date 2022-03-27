@@ -1,0 +1,27 @@
+.top {
+  width: 100%;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 45% 2fr 1fr;
+  align-items: start;
+  gap: 2.4rem;
+
+  width: 100%;
+}
+
+.search {
+  max-width: 30rem;
+  justify-self: end;
+
+  font-size: 1.4rem;
+}
+
+.menu {
+  justify-self: end;
+}

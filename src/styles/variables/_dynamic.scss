@@ -1,0 +1,101 @@
+:root {
+  // Colors -------------------------- //
+  // Main -------------------------- //
+  --colorPrimary: #f5fbdb;
+  --colorPrimaryTint: #fafdec;
+  --colorPrimaryShade: #ebf7b3;
+
+  --colorSecondary: #a6bacf;
+  --colorSecondaryTint: #ccd7e3;
+  --colorSecondaryShade: #7291b3;
+  --colorSecondaryLight: #f8fafb;
+
+  --colorComplement: rgb(255, 120, 51);
+  --colorComplementLight: #ffece2;
+
+  // Grayscale ---------------------- //
+  --colorDark: #212529;
+  --colorMedium: #495057;
+  --colorLight: #dee2e6;
+
+  // Font --------------------------- //
+  --colorFontDarker: #3f3f3f;
+  --colorFontDark: #5d5d5d;
+  --colorFontGrey: #838383;
+  --colorFontLight: #cbcbcb;
+  --colorFontLighter: #ededed;
+
+  // Seasonal ----------------------- //
+  --colorAutumn: #c36a2d;
+  --colorWinter: #c7cde3;
+  --colorSpring: #862e9c;
+  --colorSummer: #ffb319;
+
+  --colorFontAutumn: #995224;
+  --colorFontAutumnTint: #f2d8c7;
+  --colorFontWinter: #48578e;
+  --colorFontWinterTint: #e3e6f1;
+  --colorFontSpring: #862e9c;
+  --colorFontSpringTint: #eed8f3;
+  --colorFontSummer: #8c5e00;
+  --colorFontSummerTint: #ffe4af;
+
+  // Typography ----------------------- //
+  // Size ----------------------------//
+  --type00Size: 1.2rem;
+  --type01Size: 1.4rem;
+  --type02Size: 1.6rem;
+  --type03Size: 1.8rem;
+  --type04Size: 2rem;
+  --type05Size: 2.4rem;
+  --type06Size: 2.8rem;
+  --type07Size: 3.2rem;
+  --type08Size: 4.8rem;
+  --type09Size: 5.4rem;
+  --type10Size: 6rem;
+
+  // Weight ------------------------- //
+  --type00Weight: 300;
+  --type01Weight: 400;
+  --type02Weight: 500;
+  --type03Weight: 600;
+  --type04Weight: 700;
+  --type05Weight: 800;
+  --type06Weight: 900;
+
+  // Font Family -------------------- //
+  --fontTitle: "Maven Pro", sans-serif;
+  --fontGeneral: "Heebo", sans-serif;
+
+  // Measurements --------------------- //
+  // Whitespace --------------------- //
+  --ws00: 0.4rem;
+  --ws01: 0.6rem;
+  --ws02: 0.8rem;
+  --ws03: 1.2rem;
+  --ws04: 1.4rem;
+  --ws05: 1.8rem;
+  --ws06: 2.4rem;
+  --ws07: 3.2rem;
+  --ws08: 4.8rem;
+  --ws09: 5.4rem;
+  --ws10: 6.4rem;
+  --ws11: 8rem;
+  --ws12: 9.6rem;
+
+  // Size -------------------------- //
+  --sz00: 0.4rem;
+  --sz01: 0.6rem;
+  --sz02: 0.8rem;
+  --sz03: 1.2rem;
+  --sz04: 1.4rem;
+  --sz05: 1.8rem;
+  --sz06: 2.4rem;
+  --sz07: 3.2rem;
+  --sz08: 4.8rem;
+  --sz09: 5.4rem;
+  --sz10: 6.4rem;
+  --sz12: 8rem;
+  --sz12: 9.6rem;
+  --sz13: 10.8rem;
+}

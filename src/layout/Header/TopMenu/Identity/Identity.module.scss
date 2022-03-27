@@ -1,0 +1,19 @@
+.id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.id {
+  img {
+    height: 6.4rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 25rem;
+
+    color: var(--colorFontGrey);
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../../styles/variables/static";
+
+.shop {
+  box-shadow: static.$boxShadowSmallBottom;
+}
+
+.shop {
+  > section {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  h4 {
+    color: var(--colorFontDark);
+    margin-bottom: 3.2rem;
+  }
+}
+
+.wide {
+  margin-top: 1.8rem;
+  background-color: var(--colorPrimary);
+  box-shadow: static.$boxShadowSmallTop;
+}
+
+.wide {
+  > section {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+// BREAKPOINTS -----------------------------------------------
+$bpInfinite: 112.5em; //1800px
+$bpLargest: 75em; //1200px
+$bpLarge: 62.5em; //1000px
+$bpMedium: 53.125em; //850px
+$bpSmall: 43.75em; //700px
+$bpSmallest: 37.5em; //600px
+$bpMobileBreak: 28.125em; //450px
+
+// BOX SHADOW -----------------------------------------------
+// -------------------- BOX SHADOW SMALL --------
+$boxShadowSmallBottom: rgba(#000, 0.05) 0px 10px 15px -3px,
+  rgba(#000, 0.05) 0px 4px 6px -2px;
+$boxShadowSmallTop: rgba(#000, 0.08) 0px -10px 15px -3px,
+  rgba(#000, 0.05) 0px -4px 6px -2px;
+
+// -------------------- BOX SHADOW MEDIUM --------
+$boxShadowMediumBottom: rgba(#000, 0.15) 0px 10px 15px -3px,
+  rgba(#000, 0.05) 0px 4px 6px -2px;
+
+// -------------------- BOX SHADOW AROUND --------
+$boxShadowSmallAround: rgba(#000, 0.08) 0px 1px 2px 0px, rgba(#000, 0.05) 0px 2px 6px 2px;
+
+// -------------------- BOX SHADOW SOLID ---------
+$boxShadowSolidBottom: rgba(#000, 0.15) 0px 1px 2px 0px, rgba(#000, 0.08) 0px 2px 6px 2px;

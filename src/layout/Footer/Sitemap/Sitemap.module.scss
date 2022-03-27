@@ -1,0 +1,53 @@
+.map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.map {
+  h5 {
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    text-transform: capitalize;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.list {
+  li {
+  }
+
+  a {
+    font-size: 1.4rem;
+    position: relative;
+  }
+
+  a {
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0.3rem;
+
+      display: block;
+      width: 100%;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

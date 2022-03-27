@@ -1,0 +1,46 @@
+// Variables ------------- //
+$baseHeight: 2.6rem;
+$baseHeightM: -$baseHeight;
+
+.form {
+  width: calc(100% + $baseHeight);
+
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  input {
+    height: calc($baseHeight + 2px);
+    width: 100%;
+
+    padding: 0.2rem 3.4rem 0.2rem 0.8rem;
+    font-size: inherit;
+  }
+
+  button {
+    flex-shrink: 0;
+
+    height: $baseHeight;
+    width: $baseHeight;
+
+    transform: translate3d(calc($baseHeightM - 1px), 0, 0);
+    background-color: var(--colorFontLighter);
+  }
+
+  svg {
+    fill: var(--colorFontDarker);
+
+    width: 100%;
+    height: 100%;
+    padding: 0.2rem;
+  }
+}
+
+.form {
+  button {
+    &:active {
+      background-color: var(--colorFontLight);
+    }
+  }
+}

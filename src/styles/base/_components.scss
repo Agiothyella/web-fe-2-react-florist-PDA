@@ -1,0 +1,93 @@
+// Button ---------------------------------- //
+.btn {
+  display: block;
+  width: max-content;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 0.6rem 1.2rem;
+  border-radius: 3px;
+  border: 2px solid currentColor;
+  background-color: var(--colorPrimary);
+
+  font-size: 1.3rem;
+}
+
+.btn {
+  &:link,
+  &:visited {
+    color: currentColor;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  &--focus {
+    &,
+    &:link,
+    &:visited {
+      background-color: var(--colorComplement);
+      border: 3px solid currentColor;
+      // outline: 2px solid var(--colorComplement);
+      color: var(--colorPrimary);
+
+      font-size: 1.6rem;
+
+      padding: 0.8rem 1.4rem;
+    }
+
+    &:hover,
+    &:focus {
+    }
+
+    &:active {
+    }
+  }
+}
+
+.btn {
+}
+
+.btn {
+  &--flat {
+    &,
+    &:link,
+    &:visited {
+      transition: all 0.1s;
+      color: var(--colorSecondaryShade);
+      font-weight: 500;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colorPrimary);
+      background-color: var(--colorSecondaryShade);
+    }
+  }
+}
+
+.btn {
+  &--fill {
+    &,
+    &:link,
+    &:visited {
+      transition: all 0.1s;
+      color: var(--colorPrimary);
+      font-weight: 500;
+      background-color: var(--colorSecondaryShade);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colorSecondaryShade);
+      background-color: var(--colorPrimary);
+    }
+  }
+}

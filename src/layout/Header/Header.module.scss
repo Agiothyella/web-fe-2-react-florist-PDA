@@ -1,0 +1,17 @@
+@use "../../styles/variables/static";
+
+.head {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+  height: 10.8rem;
+  background-color: var(--colorSecondaryLight);
+
+  display: grid;
+  grid-template-rows: 7.6rem 3.2rem;
+  justify-items: center;
+  align-items: center;
+
+  box-shadow: static.$boxShadowMediumBottom;
+}

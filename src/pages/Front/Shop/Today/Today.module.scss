@@ -1,0 +1,23 @@
+.section {
+  background-color: var(--colorSecondary);
+}
+
+.container {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6.4rem;
+
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.stall {
+  grid-column: span 5;
+  margin-right: 2.4rem;
+}
+
+.img {
+  height: 100%;
+
+  grid-column: span 2;
+  margin-left: 2.4rem;
+}

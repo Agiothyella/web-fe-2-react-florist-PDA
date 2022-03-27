@@ -1,0 +1,12 @@
+.subsec {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 6.4rem;
+}
+
+.subsec {
+  > section:last-child {
+    border-bottom: none;
+  }
+}

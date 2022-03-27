@@ -1,0 +1,47 @@
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  z-index: 50;
+
+  background-color: var(--colorSecondaryShade);
+  color: var(--colorSecondaryLight);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.map {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pay {
+  grid-column: -3 / span 2;
+  justify-self: end;
+}
+
+.social {
+  grid-column: -3 / span 2;
+  justify-self: end;
+  align-self: center;
+}
+
+.address {
+  grid-column: -3 / span 2;
+}
+
+.copy {
+  grid-column: 1/-1;
+  padding-top: 1.2rem;
+  margin-top: 1.2rem;
+
+  text-align: center;
+  border-top: 1px solid var(--colorPrimaryTint);
+}

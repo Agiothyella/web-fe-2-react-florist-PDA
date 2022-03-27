@@ -1,0 +1,26 @@
+.pay {
+  text-align: center;
+}
+
+.pay {
+  h6 {
+    margin-bottom: 0.8rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    gap: 0.8rem;
+  }
+
+  svg {
+    height: 4rem;
+    width: 4rem;
+    padding: 0.6rem;
+
+    border-radius: 2px;
+    background-color: var(--colorPrimaryTint);
+  }
+}

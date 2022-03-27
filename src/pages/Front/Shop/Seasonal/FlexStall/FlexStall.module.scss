@@ -1,0 +1,15 @@
+.container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stall {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container {
+  > a {
+    align-self: center;
+  }
+}

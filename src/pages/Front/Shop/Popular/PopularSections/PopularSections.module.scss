@@ -1,0 +1,26 @@
+.contain {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+
+  padding: 2.4rem 4.8rem;
+  padding-bottom: 0;
+}
+
+.contain {
+  > section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    justify-content: space-between;
+  }
+}
+
+.flower {
+  grid-column: span 1;
+  padding: 2.4rem;
+}
+
+.bouquet {
+  grid-column: span 2;
+}
