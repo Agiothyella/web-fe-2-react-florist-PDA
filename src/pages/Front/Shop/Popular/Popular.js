@@ -136,8 +136,10 @@ function Popular({ className: classProp }) {
     <section className={classMerged}>
       <MainWrapper className={classes["container"]}>
         <SectionWide>
-          <h1>Liked By Many</h1>
-          <h4>Our most popular flowers and arrangements!</h4>
+          <header>
+            <h1>Liked By Many</h1>
+            <h4>Our most popular flowers and arrangements!</h4>
+          </header>
 
           <PopularSections flowers={flowers} bouquets={bouquet} />
         </SectionWide>

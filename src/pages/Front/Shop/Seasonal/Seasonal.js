@@ -219,8 +219,8 @@ function Seasonal({ className: classProp }) {
 
   return (
     <section className={classMerged}>
-      <MainWrapper className={classes["container"]}>
-        <FlexSelection>
+      <MainWrapper>
+        <FlexSelection className={classes.container}>
           {seasonalContent.map((sec, index) => {
             if (index === isActive) {
               return (

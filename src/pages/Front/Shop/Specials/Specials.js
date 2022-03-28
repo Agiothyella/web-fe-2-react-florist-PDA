@@ -115,8 +115,11 @@ function Specials({ className: classProp }) {
     <section className={classMerged}>
       <MainWrapper className={classes["container"]}>
         <SectionWide>
-          <h1>Special This Season</h1>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+          <header>
+            <h1>Special This Season</h1>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+          </header>
+
           <SpecialSections content={specialList} />
         </SectionWide>
       </MainWrapper>

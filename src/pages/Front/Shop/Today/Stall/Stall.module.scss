@@ -3,6 +3,12 @@
   padding-bottom: 5.4rem;
 }
 
+.stall {
+  header {
+    text-align: left !important;
+  }
+}
+
 .cont {
   grid-template-columns: repeat(4, 1fr);
 }

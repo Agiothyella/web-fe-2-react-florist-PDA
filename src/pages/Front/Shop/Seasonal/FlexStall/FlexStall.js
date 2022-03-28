@@ -8,7 +8,7 @@ function FlexStall({ title, subtitle, link, items, style, selector, active, onCl
     onClick(selector);
   };
 
-  const classMerged = `${classes["container"]} ${active && classes.active}`.trim();
+  const classMerged = `${classes["container"]} ${active ? classes.active : ""}`.trim();
 
   return (
     <FlexBasis

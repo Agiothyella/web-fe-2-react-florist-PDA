@@ -8,8 +8,10 @@ function Stall({ items, className: classProp }) {
 
   return (
     <div className={classMerged}>
-      <h1>Today's Special</h1>
-      <h4>Check out our best deal today, only for you to grab!</h4>
+      <header>
+        <h1>Today's Special</h1>
+        <h4>Check out our best deal today, only for you to grab!</h4>
+      </header>
 
       <ProductsContainer className={classes.cont}>
         {items.map((item) => (
