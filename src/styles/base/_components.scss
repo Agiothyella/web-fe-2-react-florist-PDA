@@ -33,7 +33,6 @@
     &:visited {
       background-color: var(--colorComplement);
       border: 3px solid currentColor;
-      // outline: 2px solid var(--colorComplement);
       color: var(--colorPrimary);
 
       font-size: 1.6rem;
@@ -48,9 +47,6 @@
     &:active {
     }
   }
-}
-
-.btn {
 }
 
 .btn {
@@ -88,6 +84,26 @@
     &:focus {
       color: var(--colorSecondaryShade);
       background-color: var(--colorPrimary);
+    }
+  }
+}
+
+.btn {
+  &--chameleon {
+    &,
+    &:link,
+    &:visited {
+      transition: all 0.1s;
+
+      color: currentColor;
+      font-weight: 500;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colorPrimary);
+      background-color: inherit;
     }
   }
 }

@@ -6,10 +6,15 @@
 
 .stall {
   grid-template-columns: 1fr 1fr 1fr;
+  color: var(--colorFontDarker);
 }
 
 .container {
   > a {
     align-self: center;
   }
+}
+
+.active {
+  flex: 1 1 500%;
 }

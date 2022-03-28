@@ -13,6 +13,7 @@ import bgAutumn from "../../../../assets/images/season-autumn.jpg";
 import bgWinter from "../../../../assets/images/season-winter.jpg";
 import bgSpring from "../../../../assets/images/season-spring.jpg";
 import bgSummer from "../../../../assets/images/season-summer.jpg";
+import { useState } from "react";
 //#endregion
 
 const seasonalContent = [
@@ -20,7 +21,10 @@ const seasonalContent = [
     title: "Autumn",
     subtitle: "Feel the autumn breeze, get flowers that only bloom in autumn",
     link: "/",
-    bgImg: bgAutumn,
+    style: {
+      bgImg: bgAutumn,
+      color: "#995224",
+    },
     items: [
       {
         imgSrc: flower1,
@@ -64,7 +68,10 @@ const seasonalContent = [
     title: "Winter",
     subtitle: "Warm your winter, get flowers that only bloom in winter",
     link: "/",
-    bgImg: bgWinter,
+    style: {
+      bgImg: bgWinter,
+      color: "#48578e",
+    },
     items: [
       {
         imgSrc: flower2,
@@ -108,7 +115,10 @@ const seasonalContent = [
     title: "Spring",
     subtitle: "Start going out again, get flowers that only bloom in spring",
     link: "/",
-    bgImg: bgSpring,
+    style: {
+      bgImg: bgSpring,
+      color: "#862e9c",
+    },
     items: [
       {
         imgSrc: flower4,
@@ -152,7 +162,10 @@ const seasonalContent = [
     title: "Summer",
     subtitle: "Relax on summer, get flowers that only bloom in summer",
     link: "/",
-    bgImg: bgSummer,
+    style: {
+      bgImg: bgSummer,
+      color: "#8c5e00",
+    },
     items: [
       {
         imgSrc: flower2,
@@ -195,15 +208,41 @@ const seasonalContent = [
 ];
 
 function Seasonal({ className: classProp }) {
+  const [isActive, setIsActive] = useState(2);
+
+  const seasonClickHandler = (selector) => {
+    console.log(selector);
+    setIsActive(selector);
+  };
+
   const classMerged = `${classes["section"]} ${classProp || ""}`.trim();
 
   return (
     <section className={classMerged}>
       <MainWrapper className={classes["container"]}>
         <FlexSelection>
-          {seasonalContent.map((sec) => (
-            <FlexStall key={sec.title} {...sec} />
-          ))}
+          {seasonalContent.map((sec, index) => {
+            if (index === isActive) {
+              return (
+                <FlexStall
+                  {...sec}
+                  key={sec.title}
+                  selector={index}
+                  active={true}
+                  onClick={seasonClickHandler}
+                />
+              );
+            }
+
+            return (
+              <FlexStall
+                {...sec}
+                key={sec.title}
+                selector={index}
+                onClick={seasonClickHandler}
+              />
+            );
+          })}
         </FlexSelection>
       </MainWrapper>
     </section>
