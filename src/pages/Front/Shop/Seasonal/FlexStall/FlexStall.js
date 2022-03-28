@@ -3,12 +3,24 @@ import SmallCard from "../../../../../components/Cards/ProductsCard/SmallCard";
 import FlexBasis from "../../../../../components/FlexSelection/FlexBasis";
 import classes from "./FlexStall.module.scss";
 
-function FlexStall({ title, subtitle, link, items, style, selector, active, onClick }) {
+function FlexStall({
+  title,
+  subtitle,
+  link,
+  items,
+  style,
+  selector,
+  active,
+  onClick,
+  className: classProp,
+}) {
   const clickHandler = () => {
     onClick(selector);
   };
 
-  const classMerged = `${classes["container"]} ${active ? classes.active : ""}`.trim();
+  const classMerged = `${classProp || ""} ${classes["container"]} ${
+    active ? classes.active : ""
+  }`.trim();
 
   return (
     <FlexBasis
@@ -20,11 +32,13 @@ function FlexStall({ title, subtitle, link, items, style, selector, active, onCl
       }}
       onClick={clickHandler}
     >
-      <h2>{title}</h2>
+      <header>
+        {!active && <h2>{title}</h2>}
+        {active && <h4>{subtitle}</h4>}
+      </header>
 
       {active && (
         <>
-          <p>{subtitle}</p>
           <SmallContainer className={classes.stall}>
             {items.map((item) => (
               <SmallCard key={item.title} {...item} />

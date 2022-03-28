@@ -1,9 +1,11 @@
 .container {
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  // filter: grayscale(1);
 
-  transition: all 0.6s;
+  transition: all 0.4s;
   transform: translate3d(0, 0, 0);
 
   cursor: pointer;
@@ -15,32 +17,53 @@
   color: var(--colorFontDarker);
 
   width: 0;
-  min-width: 40rem;
+  min-width: 42rem;
 }
 
 .container {
-  > h2 {
-    font-size: 3.2em;
+  header {
+    gap: 0.2rem;
   }
 
-  > p {
-    margin-bottom: auto;
-  }
+  header {
+    h2 {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
 
+      transform-origin: bottom left;
+      transform: rotate3d(0, 0, 1, -90deg);
+
+      font-size: 8em;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1;
+
+      padding: 0 0.2em;
+      background-color: rgba(#fff, 0.6);
+    }
+
+    h4 {
+      padding: 0 0.4em;
+      white-space: nowrap;
+      color: inherit;
+      background-color: rgba(#fff, 1);
+    }
+  }
+}
+
+.container {
   > div {
     align-self: center;
   }
 
   > a {
     align-self: center;
+    margin-top: auto;
   }
 }
 
 .active.container {
   flex: 1 1 500%;
-  border: 3px solid currentColor;
   cursor: auto;
-}
-
-.active {
 }

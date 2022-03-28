@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import MainWrapper from "../../../../components/Container/MainWrapper";
 import FlexSelection from "../../../../components/FlexSelection/FlexSelection";
 import FlexStall from "./FlexStall";
@@ -13,7 +14,6 @@ import bgAutumn from "../../../../assets/images/season-autumn.jpg";
 import bgWinter from "../../../../assets/images/season-winter.jpg";
 import bgSpring from "../../../../assets/images/season-spring.jpg";
 import bgSummer from "../../../../assets/images/season-summer.jpg";
-import { useState } from "react";
 //#endregion
 
 const seasonalContent = [
@@ -164,7 +164,7 @@ const seasonalContent = [
     link: "/",
     style: {
       bgImg: bgSummer,
-      color: "#8c5e00",
+      color: "#BF7F00",
     },
     items: [
       {
@@ -209,6 +209,10 @@ const seasonalContent = [
 
 function Seasonal({ className: classProp }) {
   const [isActive, setIsActive] = useState(2);
+  const currentMonth = useMemo(() => new Date(), []);
+
+  if (currentMonth) {
+  }
 
   const seasonClickHandler = (selector) => {
     console.log(selector);

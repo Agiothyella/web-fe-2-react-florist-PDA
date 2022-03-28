@@ -18,7 +18,7 @@ import bouquet4 from "../../../../assets/images/data-img/placeholder-4.jpg";
 const flowers = [
   {
     imgSrc: flower1,
-    title: "temibus quis",
+    title: "temibus quisquisquis",
     price: "6",
     link: "/",
   },
@@ -36,7 +36,7 @@ const flowers = [
   },
   {
     imgSrc: flower4,
-    title: "Veo quae",
+    title: "Veo quaequaequae",
     price: "2",
     link: "/",
   },
@@ -48,13 +48,13 @@ const flowers = [
   },
   {
     imgSrc: flower2,
-    title: "porro ssenda",
+    title: "porro ssendassenda",
     price: "18",
     link: "/",
   },
   {
     imgSrc: flower3,
-    title: "debis xedita",
+    title: "debis xeditaxedita",
     price: "4",
     link: "/",
   },
