@@ -116,8 +116,8 @@ function Specials({ className: classProp }) {
       <MainWrapper className={classes["container"]}>
         <SectionWide>
           <header>
-            <h1>Special This Season</h1>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            <h1>This Season's Special</h1>
+            <h4>Flower arrangements special for this season only</h4>
           </header>
 
           <SpecialSections content={specialList} />

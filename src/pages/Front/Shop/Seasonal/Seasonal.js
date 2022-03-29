@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import MainWrapper from "../../../../components/Container/MainWrapper";
 import FlexSelection from "../../../../components/FlexSelection/FlexSelection";
 import FlexStall from "./FlexStall";
@@ -18,236 +18,260 @@ import bgSummer from "../../../../assets/images/season-summer.jpg";
 
 const seasonalContent = [
   {
-    title: "Autumn",
-    subtitle: "Feel the autumn breeze, get flowers that only bloom in autumn",
-    link: "/",
     style: {
       bgImg: bgAutumn,
       color: "#995224",
     },
-    items: [
-      {
-        imgSrc: flower1,
-        title: "Nam auctor fringilla",
-        price: 12,
-        link: "/",
-      },
-      {
-        imgSrc: flower4,
-        title: "Proin felis veli",
-        price: 10,
-        link: "/",
-      },
-      {
-        imgSrc: flower2,
-        title: "convallis sodales fel",
-        price: 8,
-        link: "/",
-      },
-      {
-        imgSrc: flower1,
-        title: "cmagna at",
-        price: 6,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "Cras tempus",
-        price: 21,
-        link: "/",
-      },
-      {
-        imgSrc: flower4,
-        title: "Praesent pellentesque",
-        price: 16,
-        link: "/",
-      },
-    ],
+    data: {
+      title: "Autumn",
+      subtitle: "Feel the autumn breeze, get flowers that only bloom in autumn",
+      link: "/",
+      items: [
+        {
+          imgSrc: flower1,
+          title: "Nam auctor fringilla",
+          price: 12,
+          link: "/",
+        },
+        {
+          imgSrc: flower4,
+          title: "Proin felis veli",
+          price: 10,
+          link: "/",
+        },
+        {
+          imgSrc: flower2,
+          title: "convallis sodales fel",
+          price: 8,
+          link: "/",
+        },
+        {
+          imgSrc: flower1,
+          title: "cmagna at",
+          price: 6,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "Cras tempus",
+          price: 21,
+          link: "/",
+        },
+        {
+          imgSrc: flower4,
+          title: "Praesent pellentesque",
+          price: 16,
+          link: "/",
+        },
+      ],
+    },
   },
   {
-    title: "Winter",
-    subtitle: "Warm your winter, get flowers that only bloom in winter",
-    link: "/",
     style: {
       bgImg: bgWinter,
       color: "#48578e",
     },
-    items: [
-      {
-        imgSrc: flower2,
-        title: "Ut congue",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "llicitudin tincidu",
-        price: 12,
-        link: "/",
-      },
-      {
-        imgSrc: flower4,
-        title: "Vivamus ullamco",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower2,
-        title: "olestie sit ame",
-        price: 20,
-        link: "/",
-      },
-      {
-        imgSrc: flower1,
-        title: "aximus consectet",
-        price: 7,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "ibulum porttitor vel nisl id frin",
-        price: 17,
-        link: "/",
-      },
-    ],
+    data: {
+      title: "Winter",
+      subtitle: "Warm your winter, get flowers that only bloom in winter",
+      link: "/",
+
+      items: [
+        {
+          imgSrc: flower2,
+          title: "Ut congue",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "llicitudin tincidu",
+          price: 12,
+          link: "/",
+        },
+        {
+          imgSrc: flower4,
+          title: "Vivamus ullamco",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower2,
+          title: "olestie sit ame",
+          price: 20,
+          link: "/",
+        },
+        {
+          imgSrc: flower1,
+          title: "aximus consectet",
+          price: 7,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "ibulum porttitor vel nisl id frin",
+          price: 17,
+          link: "/",
+        },
+      ],
+    },
   },
   {
-    title: "Spring",
-    subtitle: "Start going out again, get flowers that only bloom in spring",
-    link: "/",
     style: {
       bgImg: bgSpring,
       color: "#862e9c",
     },
-    items: [
-      {
-        imgSrc: flower4,
-        title: "esent eu met",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower2,
-        title: "oin a lacus ne",
-        price: 12,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "d sit amet ero",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower1,
-        title: "iquet magna at males",
-        price: 20,
-        link: "/",
-      },
-      {
-        imgSrc: flower2,
-        title: "ltricies quam auctor sed",
-        price: 7,
-        link: "/",
-      },
-      {
-        imgSrc: flower4,
-        title: "felis velit",
-        price: 17,
-        link: "/",
-      },
-    ],
+    data: {
+      title: "Spring",
+      subtitle: "Start going out again, get flowers that only bloom in spring",
+      link: "/",
+
+      items: [
+        {
+          imgSrc: flower4,
+          title: "esent eu met",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower2,
+          title: "oin a lacus ne",
+          price: 12,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "d sit amet ero",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower1,
+          title: "iquet magna at males",
+          price: 20,
+          link: "/",
+        },
+        {
+          imgSrc: flower2,
+          title: "ltricies quam auctor sed",
+          price: 7,
+          link: "/",
+        },
+        {
+          imgSrc: flower4,
+          title: "felis velit",
+          price: 17,
+          link: "/",
+        },
+      ],
+    },
   },
   {
-    title: "Summer",
-    subtitle: "Relax on summer, get flowers that only bloom in summer",
-    link: "/",
     style: {
       bgImg: bgSummer,
       color: "#BF7F00",
     },
-    items: [
-      {
-        imgSrc: flower2,
-        title: "unc at mauris",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "landit sapien et",
-        price: 12,
-        link: "/",
-      },
-      {
-        imgSrc: flower1,
-        title: "pulvinar lectus",
-        price: 18,
-        link: "/",
-      },
-      {
-        imgSrc: flower4,
-        title: "am ut dapibus dolo",
-        price: 20,
-        link: "/",
-      },
-      {
-        imgSrc: flower1,
-        title: "Aliquam erat volutpa",
-        price: 7,
-        link: "/",
-      },
-      {
-        imgSrc: flower3,
-        title: "Nunc lectus",
-        price: 17,
-        link: "/",
-      },
-    ],
+    data: {
+      title: "Summer",
+      subtitle: "Relax on summer, get flowers that only bloom in summer",
+      link: "/",
+
+      items: [
+        {
+          imgSrc: flower2,
+          title: "unc at mauris",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "landit sapien et",
+          price: 12,
+          link: "/",
+        },
+        {
+          imgSrc: flower1,
+          title: "pulvinar lectus",
+          price: 18,
+          link: "/",
+        },
+        {
+          imgSrc: flower4,
+          title: "am ut dapibus dolo",
+          price: 20,
+          link: "/",
+        },
+        {
+          imgSrc: flower1,
+          title: "Aliquam erat volutpa",
+          price: 7,
+          link: "/",
+        },
+        {
+          imgSrc: flower3,
+          title: "Nunc lectus",
+          price: 17,
+          link: "/",
+        },
+      ],
+    },
   },
 ];
 
 function Seasonal({ className: classProp }) {
-  const [isActive, setIsActive] = useState(2);
-  const currentMonth = useMemo(() => new Date(), []);
+  const currentMonth = useMemo(() => new Date().getMonth() + 1, []);
 
-  if (currentMonth) {
+  let seasonNow = 1;
+  if (currentMonth >= 3 && currentMonth <= 5) {
+    seasonNow = 3;
+  }
+  if (currentMonth >= 6 && currentMonth <= 8) {
+    seasonNow = 4;
+  }
+  if (currentMonth >= 9 && currentMonth <= 11) {
+    seasonNow = 1;
+  }
+  if (currentMonth >= 12 && currentMonth <= 2) {
+    seasonNow = 2;
   }
 
-  const seasonClickHandler = (selector) => {
-    console.log(selector);
-    setIsActive(selector);
+  const [isActive, setIsActive] = useState(seasonNow || 1);
+
+  const seasonClickHandler = (index) => {
+    setIsActive(index);
   };
+
+  const renderedFlex = (
+    <FlexSelection className={classes.container}>
+      {seasonalContent.map((sec, index) => {
+        const status = {
+          index: index + 1,
+          active: isActive,
+          season: seasonNow,
+        };
+
+        return (
+          <FlexStall
+            {...sec}
+            key={sec.data.title}
+            status={status}
+            onClick={seasonClickHandler}
+          />
+        );
+      })}
+    </FlexSelection>
+  );
 
   const classMerged = `${classes["section"]} ${classProp || ""}`.trim();
 
   return (
     <section className={classMerged}>
       <MainWrapper>
-        <FlexSelection className={classes.container}>
-          {seasonalContent.map((sec, index) => {
-            if (index === isActive) {
-              return (
-                <FlexStall
-                  {...sec}
-                  key={sec.title}
-                  selector={index}
-                  active={true}
-                  onClick={seasonClickHandler}
-                />
-              );
-            }
-
-            return (
-              <FlexStall
-                {...sec}
-                key={sec.title}
-                selector={index}
-                onClick={seasonClickHandler}
-              />
-            );
-          })}
-        </FlexSelection>
+        <header>
+          <h1>Seasonal Flowers</h1>
+          <h4>Get special flowers that only bloom this season</h4>
+        </header>
+        {renderedFlex}
       </MainWrapper>
     </section>
   );

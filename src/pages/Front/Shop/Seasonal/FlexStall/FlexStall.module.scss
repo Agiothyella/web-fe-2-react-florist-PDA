@@ -3,10 +3,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // filter: grayscale(1);
+  filter: grayscale(1);
 
   transition: all 0.4s;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 1deg);
 
   cursor: pointer;
   overflow: hidden;
@@ -23,6 +23,7 @@
 .container {
   header {
     gap: 0.2rem;
+    color: var(--colorFontDark);
   }
 
   header {
@@ -66,4 +67,15 @@
 .active.container {
   flex: 1 1 500%;
   cursor: auto;
+}
+
+.season.container {
+  filter: grayscale(0);
+  border: 3px solid currentColor;
+}
+
+.season.container {
+  header {
+    color: inherit;
+  }
 }

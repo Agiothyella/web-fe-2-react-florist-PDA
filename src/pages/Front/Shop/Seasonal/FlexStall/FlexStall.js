@@ -2,25 +2,36 @@ import SmallContainer from "../../../../../components/Container/SmallContainer";
 import SmallCard from "../../../../../components/Cards/ProductsCard/SmallCard";
 import FlexBasis from "../../../../../components/FlexSelection/FlexBasis";
 import classes from "./FlexStall.module.scss";
+import { useEffect, useState } from "react";
 
-function FlexStall({
-  title,
-  subtitle,
-  link,
-  items,
-  style,
-  selector,
-  active,
-  onClick,
-  className: classProp,
-}) {
+function FlexStall({ data, style, status, onClick, className: classProp }) {
+  const [isActive, setIsActive] = useState(false);
+  const [isSeason, setIsSeason] = useState(false);
+
+  useEffect(() => {
+    if (status.active === status.index) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+
+    if (status.season === status.index) {
+      setIsSeason(true);
+    } else {
+      setIsSeason(false);
+    }
+  }, [status]);
+
   const clickHandler = () => {
-    onClick(selector);
+    onClick(status.index);
   };
 
-  const classMerged = `${classProp || ""} ${classes["container"]} ${
-    active ? classes.active : ""
-  }`.trim();
+  const classMerged = [
+    classProp || "",
+    classes.container || "",
+    isSeason ? classes.season : "",
+    isActive ? classes.active : "",
+  ].join(" ");
 
   return (
     <FlexBasis
@@ -33,18 +44,18 @@ function FlexStall({
       onClick={clickHandler}
     >
       <header>
-        {!active && <h2>{title}</h2>}
-        {active && <h4>{subtitle}</h4>}
+        {!isActive && <h2>{data.title}</h2>}
+        {isActive && <h4>{data.subtitle}</h4>}
       </header>
 
-      {active && (
+      {isActive && (
         <>
           <SmallContainer className={classes.stall}>
-            {items.map((item) => (
+            {data.items.map((item) => (
               <SmallCard key={item.title} {...item} />
             ))}
           </SmallContainer>
-          <a href={link} className="btn btn--chameleon">
+          <a href={data.link} className="btn btn--chameleon">
             Find More
           </a>
         </>
