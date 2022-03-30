@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3.2rem;
+
+  padding: 0 2.4rem;
+}
+
+.store {
+  grid-column: 1 / span 1;
+  padding-right: 3.2rem !important;
+  border-right: 1px solid var(--colorSecondaryTint);
+}
+
+.product {
+  grid-column: 2 / span 3;
+}

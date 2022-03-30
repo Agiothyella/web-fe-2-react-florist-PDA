@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import DetailCard from "../../../../../../components/Cards/ProductsCard/DetailCard";
-import ProductsContainer from "../../../../../../components/Container/ProductsContainer/ProductsContainer";
+import ProductsContainer from "../../../../../../components/Container/ProductsContainer";
 
 import classes from "./Bouquet.module.scss";
 

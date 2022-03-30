@@ -15,6 +15,27 @@
   grid-template-columns: repeat(5, 1fr);
 }
 
+.container {
+  .social {
+    a {
+      &:hover,
+      &:active {
+        svg {
+          fill: var(--colorSecondaryLight);
+        }
+      }
+    }
+  }
+}
+
+.social {
+  grid-template-columns: repeat(6, 1fr);
+
+  grid-column: -3 / span 2;
+  justify-self: end;
+  align-self: center;
+}
+
 .map {
   grid-column: 1 / span 3;
   grid-row: 1 / span 3;
@@ -25,12 +46,6 @@
 .pay {
   grid-column: -3 / span 2;
   justify-self: end;
-}
-
-.social {
-  grid-column: -3 / span 2;
-  justify-self: end;
-  align-self: center;
 }
 
 .address {

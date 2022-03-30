@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import MainWrapper from "../../../../components/Container/MainWrapper";
-import FlexSelection from "../../../../components/FlexSelection/FlexSelection";
+import SectionWide from "../../../../components/Cards/SectionCard/SectionWide";
+import FlexSelection from "../../../../components/FlexSelection";
 import FlexStall from "./FlexStall";
 import classes from "./Seasonal.module.scss";
 
@@ -262,16 +263,18 @@ function Seasonal({ className: classProp }) {
     </FlexSelection>
   );
 
-  const classMerged = `${classes["section"]} ${classProp || ""}`.trim();
+  const classMerged = `${classes["section"] || ""} ${classProp || ""}`.trim();
 
   return (
     <section className={classMerged}>
-      <MainWrapper>
-        <header>
-          <h1>Seasonal Flowers</h1>
-          <h4>Get special flowers that only bloom this season</h4>
-        </header>
-        {renderedFlex}
+      <MainWrapper className={classes.wrap}>
+        <SectionWide>
+          <header>
+            <h1>Seasonal Flowers</h1>
+            <h4>Get special flowers that only bloom this season</h4>
+          </header>
+          {renderedFlex}
+        </SectionWide>
       </MainWrapper>
     </section>
   );

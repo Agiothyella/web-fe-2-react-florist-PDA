@@ -1,0 +1,8 @@
+@use "../../../styles/variables/static";
+
+.card {
+  background-color: var(--colorSecondaryLight);
+  padding: 2.4rem;
+  border-radius: 2px;
+  box-shadow: static.$boxShadowSolidBottom;
+}

@@ -1,2 +1,9 @@
+@use "../../../styles/variables/static";
+
 .card {
+  width: 100%;
+  padding: 3.2rem;
+
+  background-color: var(--colorPrimaryTint);
+  box-shadow: static.$boxShadowSmallBottom;
 }

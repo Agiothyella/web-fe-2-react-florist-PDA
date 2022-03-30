@@ -1,0 +1,6 @@
+@use "../../../styles/variables/static";
+
+.bg {
+  background-color: var(--colorPrimary);
+  box-shadow: static.$boxShadowMediumAround;
+}

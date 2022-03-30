@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SmallCard from "../../../../../../components/Cards/ProductsCard/SmallCard/SmallCard";
+import SmallCard from "../../../../../../components/Cards/ProductsCard/SmallCard";
 
 import classes from "./Flower.module.scss";
 

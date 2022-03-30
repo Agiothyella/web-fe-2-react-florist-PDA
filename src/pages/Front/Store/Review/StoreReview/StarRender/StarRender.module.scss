@@ -1,0 +1,14 @@
+.stars {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  gap: 0.4rem;
+}
+
+.stars {
+  svg {
+    fill: var(--colorComplement);
+
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}

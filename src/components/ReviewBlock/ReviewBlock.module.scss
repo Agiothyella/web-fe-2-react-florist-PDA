@@ -1,0 +1,83 @@
+.card {
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 6rem 6rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-between;
+  row-gap: 2.4rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.text {
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.6;
+
+    position: relative;
+  }
+
+  a {
+    &,
+    &:link,
+    &:visited {
+      align-self: start;
+      color: var(--colorSecondaryShade);
+      font-size: 1.3em;
+    }
+  }
+}
+
+.desc {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.8rem;
+
+  row-gap: 0.4rem;
+}
+
+.img {
+  width: 7rem;
+  height: 7rem;
+
+  grid-row: span 3;
+}
+
+.reviewer {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: 1.6em;
+  color: var(--colorFontDarker);
+}
+
+.link {
+  &,
+  &:link,
+  &:visited {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--colorSecondaryShade);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.date {
+  font-size: 1.2em;
+  color: var(--colorFontGrey);
+}

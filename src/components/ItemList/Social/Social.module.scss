@@ -1,23 +1,31 @@
 .social {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   gap: 1.8rem;
 }
 
 .social {
+  a {
+    display: inline-block;
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 8px;
+  }
+
   svg {
     fill: var(--colorDark);
 
     height: 3.2rem;
     width: 3.2rem;
+
+    transition: all 0.1s;
   }
 
   a {
     &:hover,
     &:active {
       svg {
-        fill: var(--colorSecondaryLight);
+        fill: var(--colorSecondaryShade);
       }
     }
   }

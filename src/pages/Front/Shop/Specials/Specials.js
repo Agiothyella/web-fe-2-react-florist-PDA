@@ -109,7 +109,7 @@ const specialList = [
 ];
 
 function Specials({ className: classProp }) {
-  const classMerged = `${classes["section"]} ${classProp || ""}`.trim();
+  const classMerged = `${classes["section"] || ""} ${classProp || ""}`.trim();
 
   return (
     <section className={classMerged}>
