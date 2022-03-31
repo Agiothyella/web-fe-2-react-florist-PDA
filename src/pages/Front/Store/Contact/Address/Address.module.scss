@@ -6,9 +6,15 @@
 }
 
 .list {
-  h3 {
+  > p {
     padding-bottom: 1.2rem;
     border-bottom: 1px solid var(--colorSecondaryShade);
+
+    font-family: var(--fontTitle);
+    font-size: 1.8em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
   }
 }
 
@@ -23,7 +29,12 @@
     row-gap: 2.4rem;
   }
 
-  p {
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
     font-style: normal;
     font-size: 1.4rem;
     font-weight: 500;

@@ -1,0 +1,76 @@
+.accord {
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+
+  cursor: pointer;
+  border-bottom: 1px solid var(--colorSecondary);
+}
+
+.title {
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: var(--colorSecondary);
+  }
+}
+
+.title:after {
+  content: "\0002B";
+  font-size: 2rem;
+  color: inherit;
+  float: right;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  padding: 0 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.list {
+  a {
+    &,
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  .title {
+    background-color: var(--colorSecondary);
+  }
+
+  .title:after {
+    content: "\02212";
+  }
+
+  .list {
+    visibility: visible;
+    max-height: 32rem;
+  }
+}

@@ -45,7 +45,7 @@ function FlexStall({ data, style, status, onClick, className: classProp }) {
     >
       <header>
         {!isActive && <h2>{data.title}</h2>}
-        {isActive && <h4>{data.subtitle}</h4>}
+        {isActive && <h6>{data.subtitle}</h6>}
       </header>
 
       {isActive && (

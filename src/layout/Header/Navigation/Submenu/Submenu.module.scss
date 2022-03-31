@@ -1,0 +1,37 @@
+.container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+
+  color: var(--colorFontDark);
+  background-color: var(--colorPrimary);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  .wrap {
+    min-width: 48rem;
+    max-width: 114rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 8rem;
+
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.img {
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
+
+  margin-left: 6.4rem;
+}

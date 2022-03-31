@@ -11,10 +11,10 @@ function StarRender({ rating, className: classProp }) {
   const renderStar = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= starForm) {
-      renderStar.push(<FullStar title={rating} />);
+      renderStar.push(<FullStar key={i} title={rating} />);
     }
     if (i > starForm) {
-      renderStar.push(<HalfStar title={rating} />);
+      renderStar.push(<HalfStar key={i} title={rating} />);
     }
   }
 

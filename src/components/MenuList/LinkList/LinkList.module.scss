@@ -1,0 +1,31 @@
+.menu {
+  margin-bottom: 2.4rem;
+}
+
+.menu {
+  > h5 {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.list {
+  a {
+    &,
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

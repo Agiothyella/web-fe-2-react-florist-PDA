@@ -19,14 +19,14 @@ function ReviewBlock({ review, reviewer, product, date, className: classProp }) 
 
       <div className={classes.desc}>
         <img src={product.imgSrc} alt={product.name} className={classes.img} />
-        <span className={classes.reviewer}>{reviewer}</span>
         <a href={product.link} className={classes.link}>
           {product.name}
         </a>
-        <small className={classes.date}>
+        <span className={classes.reviewer}>{reviewer}</span>
+        <span className={classes.date}>
           Verified Purchase <br />
           {date}
-        </small>
+        </span>
       </div>
     </div>
   );

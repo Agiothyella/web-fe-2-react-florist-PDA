@@ -13,10 +13,16 @@
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: max-content;
+  align-items: start;
 }
 
 .container {
   .social {
+    svg {
+      fill: var(--colorDark);
+    }
+
     a {
       &:hover,
       &:active {
@@ -38,7 +44,7 @@
 
 .map {
   grid-column: 1 / span 3;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 4;
 
   grid-template-columns: repeat(3, 1fr);
 }

@@ -45,11 +45,14 @@
       background-color: rgba(#fff, 0.6);
     }
 
-    h4 {
+    h6 {
       padding: 0 0.4em;
+
       white-space: nowrap;
-      color: inherit;
       background-color: rgba(#fff, 1);
+
+      color: inherit;
+      text-transform: uppercase;
     }
   }
 }

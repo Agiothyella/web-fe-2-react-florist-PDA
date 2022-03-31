@@ -8,10 +8,12 @@
 
 .store {
   grid-column: 1 / span 1;
-  padding-right: 3.2rem !important;
-  border-right: 1px solid var(--colorSecondaryTint);
+  // padding-right: 3.2rem !important;
+  // border-right: 1px solid var(--colorSecondaryTint);
 }
 
 .product {
   grid-column: 2 / span 3;
+  padding-left: 3.2rem !important;
+  border-left: 1px solid var(--colorSecondaryTint);
 }

@@ -18,7 +18,7 @@
   }
 
   svg {
-    fill: var(--colorDark);
+    fill: var(--colorFontDarker);
   }
 }
 
@@ -45,6 +45,15 @@
 }
 
 .name {
+  &,
+  &:link,
+  &:visited {
+    color: var(--colorFontDarker);
+  }
+}
+
+.name {
+  &:focus,
   &:hover,
   &:active {
     span {
@@ -66,11 +75,15 @@
     width: 2.4rem;
 
     z-index: 10;
+    transition: all 0.1s;
   }
 }
 
 .cart {
   &:hover,
   &:active {
+    svg {
+      fill: var(--colorDark);
+    }
   }
 }
