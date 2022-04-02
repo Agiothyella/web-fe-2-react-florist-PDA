@@ -16,7 +16,6 @@
 }
 
 .a {
-  // , .focus {
   &:link,
   &:visited {
     color: inherit;
@@ -31,6 +30,13 @@
     background-color: var(--colorPrimary);
     text-decoration: none;
   }
+}
+
+.focus {
+  outline: none;
+  color: var(--colorFontDarker) !important;
+  background-color: var(--colorPrimary) !important;
+  text-decoration: none;
 }
 
 .sub {

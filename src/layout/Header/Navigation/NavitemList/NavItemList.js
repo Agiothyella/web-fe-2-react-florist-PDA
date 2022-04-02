@@ -1,7 +1,10 @@
+import { useRef } from "react";
 import Submenu from "../Submenu";
 import classes from "./NavItemList.module.scss";
 
 function NavItemList({ index, active, open, nav, subnavHandler }) {
+  const listMenu = useRef();
+
   let isActive = false;
   if (active === index) {
     isActive = true;
@@ -32,18 +35,11 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
     subnavHandler(index, true);
   };
 
-  const deactivateSubnav = (e) => {
-    e && e.preventDefault();
-
-    subnavHandler(null, true);
-    console.log("asd");
-  };
-
   const linkClass = [
     classes.a,
     "ph-m",
     nav.subnav ? classes.sub : "",
-    // nav.isActive || nav.isOpen ? classes.focus : "",
+    isActive ? classes.focus : "",
   ]
     .join(" ")
     .trim();
@@ -54,7 +50,6 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
       onMouseEnter={openSubnav}
       onMouseLeave={closeSubnav}
       onClick={activateSubnav}
-      onBlur={deactivateSubnav}
     >
       <a href={nav.link} className={linkClass}>
         {nav.content}

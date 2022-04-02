@@ -185,6 +185,21 @@ function Navigation() {
   const [subnavOpen, setSubnavOpen] = useState(null);
   const [subnavActive, setSubnavActive] = useState(null);
 
+  const deactivateSubnav = (e) => {
+    e && e.preventDefault();
+    const currentTarget = e.currentTarget;
+
+    setTimeout(() => {
+      if (!currentTarget.contains(e.relatedTarget)) {
+        setSubnavActive(null);
+      }
+    }, 0);
+
+    // if (!e.currentTarget.contains(e.relatedTarget)) {
+    //   setSubnavActive(null);
+    // }
+  };
+
   const subnavHandler = (i, activate) => {
     if (!activate) {
       setSubnavOpen(i);
@@ -197,7 +212,7 @@ function Navigation() {
   return (
     <nav className={classes["nav"]}>
       <MainWrapper className={`${classes["container"]} ph-m`}>
-        <ul className={classes["list"]}>
+        <ul className={classes["list"]} tabIndex={1} onBlur={deactivateSubnav}>
           {navList.map((item) => (
             <NavItemList
               key={item.nav.index}
