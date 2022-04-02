@@ -42,5 +42,9 @@ $baseHeightM: -$baseHeight;
     &:active {
       background-color: var(--colorFontLight);
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
