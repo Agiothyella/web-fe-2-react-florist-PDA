@@ -3,8 +3,6 @@ import Submenu from "../Submenu";
 import classes from "./NavItemList.module.scss";
 
 function NavItemList({ index, active, open, nav, subnavHandler }) {
-  const listMenu = useRef();
-
   let isActive = false;
   if (active === index) {
     isActive = true;
@@ -39,7 +37,8 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
     classes.a,
     "ph-m",
     nav.subnav ? classes.sub : "",
-    isActive ? classes.focus : "",
+    isActive ? classes.open : "",
+    isOpen ? classes.open : "",
   ]
     .join(" ")
     .trim();

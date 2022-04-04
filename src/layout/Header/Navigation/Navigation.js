@@ -87,37 +87,6 @@ const navList = [
             { link: "/", content: "Itaque perspiciatis" },
           ],
         },
-        {
-          title: "Everydays",
-          link: "/",
-          links: [
-            { link: "/", content: "Just because" },
-            { link: "/", content: "Birthday" },
-            { link: "/", content: "Anniversary" },
-            { link: "/", content: "Congratulations" },
-            { link: "/", content: "Get well" },
-            { link: "/", content: "Sympathy" },
-          ],
-        },
-        {
-          title: "Earth Day specials",
-          link: "/",
-          links: [
-            { link: "/", content: "Earth day arrangement" },
-            { link: "/", content: "Pot Flowers" },
-            { link: "/", content: "Container garden" },
-          ],
-        },
-        {
-          title: "Spring festivals",
-          link: "/",
-          links: [
-            { link: "/", content: "Totam explicabo" },
-            { link: "/", content: "Ducimus quaerat" },
-            { link: "/", content: "Est blanditiis dolores" },
-            { link: "/", content: "Itaque perspiciatis" },
-          ],
-        },
       ],
     },
   },

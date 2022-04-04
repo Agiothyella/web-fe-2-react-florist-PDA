@@ -15,7 +15,9 @@
     &:link,
     &:visited {
       font-size: 1.4em;
-      color: var(--colorFontGrey) !important;
+      color: var(--colorSecondary) !important;
+
+      transition: all 0.1s;
     }
 
     &:focus,
