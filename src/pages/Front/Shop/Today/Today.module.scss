@@ -1,3 +1,5 @@
+@use "../../../../styles/variables/static";
+
 .section {
   background-color: var(--colorSecondary);
 }
@@ -8,11 +10,23 @@
 
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    gap: 1.2rem;
+    padding-right: 0;
+  }
 }
 
 .stall {
   grid-column: span 5;
   margin-right: 2.4rem;
+
+  padding-top: 5.4rem;
+  padding-bottom: 5.4rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    margin-right: 0;
+  }
 }
 
 .img {

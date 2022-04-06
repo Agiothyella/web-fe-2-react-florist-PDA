@@ -32,7 +32,7 @@ function Sitemap({ className: classProp, sitemap }) {
 
   const classMerged = `${classes["map"]} ${classProp || ""}`.trim();
 
-  return <nav className={classMerged}>{width > 1000 ? renderList : renderAccordion}</nav>;
+  return <nav className={classMerged}>{width > 800 ? renderList : renderAccordion}</nav>;
 }
 
 export default Sitemap;

@@ -6,9 +6,9 @@ import classes from "./Store.module.scss";
 function Store() {
   return (
     <div className={classes["store"]}>
-      <Review />
-      <Contact />
-      <About />
+      <Review className="mv-h" />
+      <Contact className="mv-h" />
+      <About className="mv-h" />
     </div>
   );
 }

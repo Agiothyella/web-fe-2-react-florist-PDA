@@ -1,3 +1,5 @@
+@use "../../../../../styles/variables/static";
+
 .container {
   position: relative;
   background-size: cover;
@@ -53,6 +55,10 @@
 
       color: inherit;
       text-transform: uppercase;
+
+      @media only screen and (max-width: static.$bpLarge) {
+        font-weight: 600;
+      }
     }
   }
 }
@@ -71,6 +77,10 @@
 .active.container {
   flex: 1 1 500%;
   cursor: auto;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    flex: 1 1 800%;
+  }
 }
 
 .season.container {

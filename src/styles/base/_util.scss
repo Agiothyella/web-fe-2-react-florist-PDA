@@ -1,13 +1,25 @@
+@use "../../styles/variables/static";
+
 // Verticavl ------------------------------------ //
 // Margin ---------------------------- //
 .mv-vh {
   margin-top: 8rem;
   margin-bottom: 8rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    margin-top: 6.4rem;
+    margin-bottom: 6.4rem;
+  }
 }
 
 .mv-h {
   margin-top: 6.4rem;
   margin-bottom: 6.4rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
 }
 
 .mv-vl {
@@ -54,11 +66,21 @@
 .pv-vh {
   padding-top: 8rem;
   padding-bottom: 8rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
 }
 
 .pv-h {
   padding-top: 6.4rem;
   padding-bottom: 6.4rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
 }
 
 .pv-vl {

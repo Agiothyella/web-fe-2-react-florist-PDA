@@ -2,10 +2,16 @@
 $bpInfinite: 112.5em; //1800px
 $bpLargest: 75em; //1200px
 $bpLarge: 62.5em; //1000px
-$bpMedium: 53.125em; //850px
+$bpMedium: 50em; //800px
 $bpSmall: 43.75em; //700px
 $bpSmallest: 37.5em; //600px
 $bpMobileBreak: 28.125em; //450px
+
+:export {
+  bpLarge: $bpLarge;
+  bpMedium: $bpMedium;
+  bpSmallest: $bpSmallest;
+}
 
 // BOX SHADOW -----------------------------------------------
 // -------------------- BOX SHADOW SMALL --------

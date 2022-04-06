@@ -77,6 +77,28 @@
     z-index: 10;
     transition: all 0.1s;
   }
+
+  div {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    background-color: var(--colorComplement);
+    color: var(--colorFontLighter);
+
+    font-size: 1.4rem;
+    border-radius: 50%;
+
+    transform: translate3d(0.8rem, -0.8rem, 0);
+    z-index: 15;
+  }
 }
 
 .cart {

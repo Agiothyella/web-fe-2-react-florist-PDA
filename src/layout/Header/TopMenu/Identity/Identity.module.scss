@@ -1,3 +1,5 @@
+@use "../../../../styles/variables/static";
+
 .id {
   display: flex;
   justify-content: space-between;
@@ -15,5 +17,9 @@
     max-width: 25rem;
 
     color: var(--colorFontGrey);
+
+    @media only screen and (max-width: static.$bpLarge) {
+      display: none;
+    }
   }
 }

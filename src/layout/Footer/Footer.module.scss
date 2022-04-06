@@ -1,3 +1,5 @@
+@use "../../styles/variables/static";
+
 .foot {
   display: flex;
   flex-direction: column;
@@ -47,6 +49,10 @@
   grid-row: 1 / span 4;
 
   grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-column: 1 / span 2;
+  }
 }
 
 .pay {

@@ -125,7 +125,7 @@ const navList = [
           links: [
             { link: "/", content: "Under $50" },
             { link: "/", content: "From $50 to $100" },
-            { link: "/", content: "Over $100 blossom" },
+            { link: "/", content: "Over $100" },
           ],
         },
       ],
@@ -163,10 +163,6 @@ function Navigation() {
         setSubnavActive(null);
       }
     }, 0);
-
-    // if (!e.currentTarget.contains(e.relatedTarget)) {
-    //   setSubnavActive(null);
-    // }
   };
 
   const subnavHandler = (i, activate) => {

@@ -27,7 +27,9 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
   };
 
   const activateSubnav = (e) => {
-    e && e.preventDefault();
+    if (nav.subnav) {
+      e && e.preventDefault();
+    }
 
     subnavHandler(null, false);
     subnavHandler(index, true);

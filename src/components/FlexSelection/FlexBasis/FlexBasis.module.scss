@@ -6,3 +6,9 @@
 
   padding: 2.4rem;
 }
+
+.base {
+  &:focus {
+    outline: none;
+  }
+}

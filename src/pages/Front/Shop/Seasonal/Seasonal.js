@@ -25,7 +25,7 @@ const seasonalContent = [
     },
     data: {
       title: "Autumn",
-      subtitle: "Feel the autumn breeze, get flowers that only bloom in autumn",
+      subtitle: "Feel the breeze, get flowers that only bloom in autumn",
       link: "/",
       items: [
         {

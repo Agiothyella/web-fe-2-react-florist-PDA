@@ -15,15 +15,14 @@
     &:link,
     &:visited {
       font-size: 1.4em;
-      color: var(--colorSecondary) !important;
-
+      color: var(--colorSecondaryShade) !important;
       transition: all 0.1s;
     }
 
     &:focus,
     &:hover,
     &:active {
-      color: var(--colorSecondaryShade) !important;
+      color: var(--colorComplement) !important;
     }
   }
 }
@@ -49,6 +48,7 @@
     &:visited {
       color: inherit;
       font-size: 1.4em;
+      transition: all 0.1s;
     }
 
     &:focus,

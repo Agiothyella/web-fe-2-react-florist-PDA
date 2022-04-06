@@ -1,3 +1,5 @@
+@use "../../../styles/variables/static";
+
 .store {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,6 @@
 
 .store {
   > article {
-    margin: 6.4rem 0;
     width: 100%;
 
     display: flex;
