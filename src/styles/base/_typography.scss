@@ -1,3 +1,5 @@
+@use "../variables/static";
+
 // Base ---------------------------------- //
 // Header ------------------------------ //
 h1 {
@@ -6,6 +8,10 @@ h1 {
   font-weight: 500;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    font-size: 3.2em;
+  }
 }
 
 h2 {

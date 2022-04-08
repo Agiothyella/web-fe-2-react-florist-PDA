@@ -14,12 +14,27 @@
   align-items: center;
 
   box-shadow: static.$boxShadowMediumBottom;
+  padding: 0 3.2rem;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: calc(100%);
+    overflow-y: auto;
+
+    box-shadow: none;
+  }
 }
 
 .container {
   .wrap {
     min-width: 48rem;
-    max-width: 114rem;
+    max-width: 120rem;
+
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
 
     display: flex;
     flex-direction: row;
@@ -31,6 +46,26 @@
     margin-bottom: 0.8rem;
 
     animation: subnav-fade-in 0.6s ease-out;
+
+    @media only screen and (max-width: static.$bpLargest) {
+      gap: 8rem;
+    }
+
+    @media only screen and (max-width: static.$bpLarge) {
+      max-width: 100%;
+    }
+
+    @media only screen and (max-width: static.$bpMedium) {
+      gap: 6.4rem;
+    }
+
+    @media only screen and (max-width: static.$bpSmall) {
+      flex-direction: column;
+      align-items: center;
+
+      margin: 0;
+      padding: 4.8rem 2.4rem;
+    }
   }
 }
 
@@ -46,12 +81,52 @@
   padding-bottom: 2.4rem;
 
   overflow-x: auto;
+
+  // SCROLL --------------------------------- //
+
+  /*Firefox*/
+  scrollbar-width: thin;
+  scrollbar-color: var(--colorGrey) var(--colorPrimary);
+
+  /* Chrome, Edge, and Safari */
+  // &::-webkit-scrollbar {
+  //   height: auto;
+  //   width: auto;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: var(--colorPrimary);
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: var(--colorGrey);
+  // }
+  // ---------------------------------------- //
+
+  @media only screen and (max-width: static.$bpLargest) {
+    gap: 6.4rem;
+  }
+
+  @media only screen and (max-width: static.$bpMedium) {
+    gap: 4.8rem;
+  }
+
+  @media only screen and (max-width: static.$bpSmall) {
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    gap: 6.4rem;
+  }
 }
 
 .img {
   height: 25rem;
   object-fit: cover;
   object-position: center;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    display: none;
+  }
 }
 
 @keyframes subnav-fade-in {

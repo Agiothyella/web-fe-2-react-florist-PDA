@@ -1,3 +1,5 @@
+@use "../../../../../styles/variables/static";
+
 .frame {
   position: relative;
   overflow: hidden;
@@ -6,6 +8,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
+
+  @media only screen and (max-width: static.$bpMedium) {
+    width: max-content;
+    justify-self: center;
+
+    border-radius: 4px;
+  }
 }
 
 .frame {
@@ -55,6 +64,11 @@
 
     font-size: 1.8rem;
     font-weight: 500;
+
+    @media only screen and (max-width: static.$bpMedium) {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
   }
 
   .btn {
@@ -96,6 +110,26 @@
       transition: all 0.4s ease-out;
 
       z-index: -1;
+    }
+  }
+}
+
+.frame {
+  .btn {
+    transition: all 0.1s;
+  }
+
+  .btn:hover {
+    @media only screen and (max-width: static.$bpMedium) {
+      color: var(--colorComplement);
+      background-color: var(--colorComplementLight);
+    }
+  }
+
+  .btn::after {
+    @media only screen and (max-width: static.$bpMedium) {
+      content: none;
+      display: none;
     }
   }
 }

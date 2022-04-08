@@ -1,3 +1,5 @@
+@use "../../../styles/variables/static";
+
 .nav {
   height: 100%;
   width: 100%;
@@ -8,11 +10,33 @@
 
   color: var(--colorSecondaryLight);
   background-color: var(--colorSecondaryShade);
+
+  transition: all 0.4s ease-out;
+  overflow-x: hidden;
+}
+
+.nav {
+  @media only screen and (max-width: static.$bpSmall) {
+    position: fixed;
+    top: 12.4rem;
+    right: 0;
+
+    height: calc(100% - 12.4rem);
+    overflow-y: auto;
+
+    color: var(--colorFontDarker);
+    background-color: var(--colorPrimaryTint);
+    transform: translate3d(100vw, 0, 0);
+  }
 }
 
 .container {
   height: 100%;
   width: auto;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    width: 100%;
+  }
 }
 
 .list {
@@ -23,10 +47,20 @@
   justify-items: center;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 1.2rem;
+  }
 }
 
 .list {
   &:focus {
     outline: none;
   }
+}
+
+.nav.open {
+  transform: translate3d(0, 0, 0);
 }

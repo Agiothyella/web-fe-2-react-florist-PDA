@@ -1,3 +1,5 @@
+@use "../../../../styles/variables/static";
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -19,6 +21,10 @@
 
   svg {
     fill: var(--colorFontDarker);
+
+    @media only screen and (max-width: static.$bpSmall) {
+      fill: var(--colorFontLighter);
+    }
   }
 }
 
@@ -30,6 +36,11 @@
   svg {
     height: 1.8rem;
     width: 1.8rem;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   span {
@@ -41,6 +52,11 @@
     text-overflow: ellipsis;
 
     transition: all 0.1s;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      color: var(--colorFontLighter);
+      font-weight: 500;
+    }
   }
 }
 
@@ -49,6 +65,10 @@
   &:link,
   &:visited {
     color: var(--colorFontDarker);
+
+    @media only screen and (max-width: static.$bpSmall) {
+      fill: var(--colorFontLighter);
+    }
   }
 }
 
@@ -76,6 +96,11 @@
 
     z-index: 10;
     transition: all 0.1s;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
   }
 
   div {
@@ -106,6 +131,10 @@
   &:active {
     svg {
       fill: var(--colorDark);
+
+      @media only screen and (max-width: static.$bpSmall) {
+        fill: var(--colorFontLighter);
+      }
     }
   }
 }

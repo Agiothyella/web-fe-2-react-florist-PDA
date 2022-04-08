@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
+import SmallContainer from "../../../../../../components/Container/SmallContainer";
 import SmallCard from "../../../../../../components/Cards/ProductsCard/SmallCard";
+import preventDefault from "../../../../../../util/prevent-default";
 
 import classes from "./Flower.module.scss";
 import styles from "../../../../../../styles/variables/_static.scss";
 
 import bg from "../../../../../../assets/images/pop-img.jpg";
-import SmallContainer from "../../../../../../components/Container/SmallContainer";
 
 function Flower({ className: classProp, flowers }) {
   const [width, setWidth] = useState(window.innerWidth);
 
-  const bpLarge = parseFloat(styles.bpLarge) * 16;
-  const bpMedium = parseFloat(styles.bpMedium) * 16;
+  const bpMedium = parseFloat(styles.bpMedium);
+  const bpSmall = parseFloat(styles.bpSmall);
+  const bpSmallest = parseFloat(styles.bpSmallest);
+  const bpMobileBreak = parseFloat(styles.bpMobileBreak);
+  const bpSquareBreak = parseFloat(styles.bpSquareBreak);
 
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
@@ -22,21 +26,24 @@ function Flower({ className: classProp, flowers }) {
     };
   }, []);
 
-  let filter;
-  if (width > bpLarge) {
-    filter = flowers.filter((_, i) => {
-      return i < 8;
-    });
+  let filter = flowers;
+  if (width > bpMedium) {
+    filter = flowers.slice(0, 8);
   }
-  if (width >= bpMedium && width <= bpLarge) {
-    filter = flowers.filter((_, i) => {
-      return i < 8;
-    });
+  if (width > bpSmall && width <= bpMedium) {
+    filter = flowers.slice(0, 12);
   }
-  if (width < bpMedium) {
-    filter = flowers.filter((_, i) => {
-      return i < 10;
-    });
+  if (width > bpSmallest && width <= bpSmall) {
+    filter = flowers.slice(0, 10);
+  }
+  if (width > bpMobileBreak && width <= bpSmallest) {
+    filter = flowers.slice(0, 8);
+  }
+  if (width > bpSquareBreak && width <= bpMobileBreak) {
+    filter = flowers.slice(0, 9);
+  }
+  if (width <= bpSquareBreak) {
+    filter = flowers.slice(0, 6);
   }
 
   const classMerged = `${classes.sect} v-ce ${classProp || ""}`.trim();
@@ -50,11 +57,11 @@ function Flower({ className: classProp, flowers }) {
     >
       <SmallContainer className={classes.cont}>
         {filter.map((item) => (
-          <SmallCard key={item.title} {...item} />
+          <SmallCard key={item.title} {...item} onClick={preventDefault} />
         ))}
       </SmallContainer>
 
-      <a className="btn btn--flat" href="/">
+      <a href="/" className="btn btn--flat" onClick={preventDefault}>
         more flowers
       </a>
     </section>

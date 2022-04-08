@@ -1,3 +1,5 @@
+@use "../../../../../../styles/variables/static";
+
 .sect {
   background-color: var(--colorWinter);
 }
@@ -6,5 +8,21 @@
   .cont {
     grid-template-columns: 1fr 1fr;
     width: 100%;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media only screen and (max-width: static.$bpSmallest) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media only screen and (max-width: calc(static.$bpMobileBreak + 1px)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: static.$bpSquareBreak) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

@@ -1,13 +1,13 @@
+@use "../../../styles/variables/static";
+
 .address {
   display: flex;
   flex-direction: column;
   align-items: end;
 
   font-style: normal;
-}
 
-.address {
-  span {
-    text-align: right;
+  @media only screen and (max-width: static.$bpSmallest) {
+    align-items: center;
   }
 }

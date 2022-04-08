@@ -1,3 +1,5 @@
+@use "../../../../styles/variables/static";
+
 .list {
   height: 100%;
   width: 100%;
@@ -22,28 +24,79 @@
     font-size: 1.4em;
   }
 
+  &:hover,
+  &:active {
+    color: var(--colorFontDarker);
+    background-color: var(--colorPrimary);
+  }
+
   &:focus,
   &:hover,
   &:active {
     outline: none;
-    color: var(--colorFontDarker);
-    background-color: var(--colorPrimary);
     text-decoration: none;
   }
 }
 
-.open {
+.subnav {
+  display: none;
+  transition: all 0.4s ease-out;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    display: block;
+    transform: translate3d(100vw, 0, 0);
+  }
+}
+
+.visible.subnav {
+  display: grid;
+
+  @media only screen and (max-width: static.$bpSmall) {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.open,
+.active {
   outline: none;
   color: var(--colorFontDarker) !important;
   background-color: var(--colorPrimary) !important;
   text-decoration: none;
 }
 
-.sub {
+.have-subnav {
   &::after {
     display: inline-block;
     content: "\02228";
     font-size: 0.8em;
     margin-left: 0.5rem;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      content: ">";
+      margin-left: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: static.$bpSmall) {
+  .mobile-controller {
+    transform: translate3d(100vw, 0, 0) !important;
+  }
+
+  .a {
+    padding: 1.8rem;
+  }
+
+  .a {
+    &:link,
+    &:visited {
+      font-size: 1.8em;
+      background-color: var(--colorFontLighter);
+    }
+  }
+
+  .open,
+  .active {
+    background-color: var(--colorSecondary) !important;
   }
 }

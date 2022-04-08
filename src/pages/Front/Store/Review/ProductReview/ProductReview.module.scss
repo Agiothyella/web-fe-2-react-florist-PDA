@@ -1,3 +1,5 @@
+@use "../../../../../styles/variables/static";
+
 .prod {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -6,6 +8,14 @@
 
   color: var(--colorFontDark);
   font-size: 1rem;
+
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .prod {
@@ -13,5 +23,50 @@
     grid-column: 1/-1;
     margin-bottom: 2.4rem;
     color: var(--colorFontDarker);
+
+    @media only screen and (max-width: static.$bpMedium) {
+      grid-column: 2 / span 1;
+      padding: 0 1.2rem;
+    }
+
+    @media only screen and (max-width: static.$bpSmallest) {
+      grid-column: span 1;
+      text-align: center;
+    }
+  }
+}
+
+.block {
+  padding: 0 1.2rem;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    border-bottom: 1px solid var(--colorSecondaryTint);
+  }
+}
+
+.block {
+  &:not(:nth-child(3)) {
+    @media only screen and (max-width: static.$bpMedium) {
+      margin-top: 3.2rem;
+    }
+
+    @media only screen and (max-width: static.$bpSmallest) {
+      margin-top: 0;
+    }
+  }
+
+  &:not(:nth-child(2)) {
+    @media only screen and (max-width: static.$bpSmallest) {
+      margin-top: 4.8rem !important;
+    }
+  }
+}
+
+.sdf {
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
   }
 }

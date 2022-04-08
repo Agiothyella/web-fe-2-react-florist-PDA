@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Submenu from "../Submenu";
 import classes from "./NavItemList.module.scss";
 
@@ -31,6 +30,12 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
       e && e.preventDefault();
     }
 
+    if (isActive) {
+      subnavHandler(null, true);
+      subnavHandler(null, false);
+      return;
+    }
+
     subnavHandler(null, false);
     subnavHandler(index, true);
   };
@@ -38,24 +43,27 @@ function NavItemList({ index, active, open, nav, subnavHandler }) {
   const linkClass = [
     classes.a,
     "ph-m",
-    nav.subnav ? classes.sub : "",
-    isActive ? classes.open : "",
+    nav.subnav ? classes["have-subnav"] : "",
+    isActive ? classes.active : "",
     isOpen ? classes.open : "",
   ]
     .join(" ")
     .trim();
 
+  const subnavClass = [
+    classes.subnav,
+    isOpen ? classes["mobile-controller"] : "",
+    (nav.subnav && (isOpen || isActive) && classes.visible) || "",
+  ]
+    .join(" ")
+    .trim();
+
   return (
-    <li
-      className={classes["list"]}
-      onMouseEnter={openSubnav}
-      onMouseLeave={closeSubnav}
-      onClick={activateSubnav}
-    >
-      <a href={nav.link} className={linkClass}>
+    <li className={classes["list"]} onMouseEnter={openSubnav} onMouseLeave={closeSubnav}>
+      <a href={nav.link} className={linkClass} onClick={activateSubnav}>
         {nav.content}
       </a>
-      {nav.subnav && (isOpen || isActive) && <Submenu menu={nav.subnav} />}
+      {<Submenu menu={nav.subnav} className={subnavClass} />}
     </li>
   );
 }

@@ -1,7 +1,19 @@
+@use "../../../../styles/variables/static";
+
 .container {
   transform: translate3d(0, 0, 0);
 
   height: 44rem;
+  flex-direction: row;
+
+  @media only screen and (max-width: static.$bpMedium) {
+    height: 74rem;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: static.$bpSquareBreak) {
+    height: 80rem;
+  }
 }
 
 .wrap {

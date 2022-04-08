@@ -15,6 +15,11 @@
     gap: 1.2rem;
     padding-right: 0;
   }
+
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-template-columns: 1fr;
+    padding: 5.4rem 2.4rem;
+  }
 }
 
 .stall {
@@ -24,8 +29,16 @@
   padding-top: 5.4rem;
   padding-bottom: 5.4rem;
 
-  @media only screen and (max-width: static.$bpLarge) {
-    margin-right: 0;
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-column: auto;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    padding-bottom: 4.8rem;
   }
 }
 
@@ -34,4 +47,13 @@
 
   grid-column: span 2;
   margin-left: 2.4rem;
+
+  @media only screen and (max-width: static.$bpLarge) {
+    margin-left: 4.8rem;
+  }
+
+  @media only screen and (max-width: static.$bpMedium) {
+    grid-column: auto;
+    margin: 0;
+  }
 }

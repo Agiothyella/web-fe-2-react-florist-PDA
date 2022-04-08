@@ -1,3 +1,5 @@
+@use "../../../styles/variables/static";
+
 .card {
   width: 100%;
   padding: 2.4rem;
@@ -15,5 +17,9 @@
   h5,
   h6 {
     margin: 0 1.8rem;
+
+    @media only screen and (max-width: static.$bpSmall) {
+      margin: 0rem;
+    }
   }
 }

@@ -1,8 +1,8 @@
 import classes from "./DetailCard.module.scss";
 
-function DetailCard({ imgSrc, title, price, link }) {
+function DetailCard({ imgSrc, title, price, link, onClick }) {
   return (
-    <a href={link} className={classes.product}>
+    <a href={link} className={classes.product} onClick={onClick}>
       <img src={imgSrc} alt={title} />
       <span className={classes.title}>{title}</span>
       <span className={classes.price}>${price}</span>

@@ -20,7 +20,7 @@ const items = [
     imgSrc: today2,
     title: "Facere itaque exercitationem",
     discPrice: 86,
-    oriPrice: 78,
+    oriPrice: 102,
     link: "/link",
   },
   {

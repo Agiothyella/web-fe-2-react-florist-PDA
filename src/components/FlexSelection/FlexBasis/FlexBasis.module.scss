@@ -1,3 +1,5 @@
+@use "../../../styles/variables/static";
+
 .base {
   flex: 1 1 100%;
 
@@ -5,10 +7,25 @@
   flex-direction: column;
 
   padding: 2.4rem;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
 }
 
 .base {
   &:focus {
     outline: none;
+    animation: focusing 1.2s ease-out;
+  }
+}
+@keyframes focusing {
+  0% {
+    outline: 3px solid currentColor;
+  }
+
+  100% {
+    outline: 3px solid transparent;
   }
 }

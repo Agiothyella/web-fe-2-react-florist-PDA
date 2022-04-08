@@ -2,9 +2,11 @@ import SubmenuList from "./SubmenuList";
 import classes from "./Submenu.module.scss";
 import sideImg from "../../../../assets/images/subnav-img-2x.jpg";
 
-function Submenu({ menu }) {
+function Submenu({ menu, className: classProp }) {
+  const classMerged = `${classes.container} ${classProp || ""}`.trim();
+
   return (
-    <nav className={classes["container"]}>
+    <nav className={classMerged}>
       <div className={classes.wrap}>
         <div className={classes.menus}>
           {menu &&

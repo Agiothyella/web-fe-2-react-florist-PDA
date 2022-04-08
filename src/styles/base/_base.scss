@@ -47,10 +47,10 @@ ul {
   list-style: none;
 }
 
-:focus {
-  outline: 2px solid var(--colorSecondaryShade);
-}
-
 img {
   border-radius: 2px;
+}
+
+:focus {
+  outline: 2px solid var(--colorSecondaryShade);
 }

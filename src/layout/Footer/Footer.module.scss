@@ -17,6 +17,10 @@
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: max-content;
   align-items: start;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .container {
@@ -42,6 +46,11 @@
   grid-column: -3 / span 2;
   justify-self: end;
   align-self: center;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    justify-self: center;
+    grid-column: auto;
+  }
 }
 
 .map {
@@ -53,15 +62,30 @@
   @media only screen and (max-width: static.$bpMedium) {
     grid-column: 1 / span 2;
   }
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    grid-column: auto;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .pay {
   grid-column: -3 / span 2;
   justify-self: end;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    justify-self: center;
+    grid-column: auto;
+  }
 }
 
 .address {
   grid-column: -3 / span 2;
+
+  @media only screen and (max-width: static.$bpSmallest) {
+    justify-self: center;
+    grid-column: auto;
+  }
 }
 
 .copy {

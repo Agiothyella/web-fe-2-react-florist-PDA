@@ -1,8 +1,8 @@
+import { useState } from "react";
 import MainWrapper from "../../../components/Container/MainWrapper";
 import NavItemList from "./NavitemList";
 
 import classes from "./Navigation.module.scss";
-import { useState } from "react";
 
 const navList = [
   {
@@ -87,6 +87,37 @@ const navList = [
             { link: "/", content: "Itaque perspiciatis" },
           ],
         },
+        {
+          title: "Everydayz",
+          link: "/",
+          links: [
+            { link: "/", content: "Just because" },
+            { link: "/", content: "Birthday" },
+            { link: "/", content: "Anniversary" },
+            { link: "/", content: "Congratulations" },
+            { link: "/", content: "Get well" },
+            { link: "/", content: "Sympathy" },
+          ],
+        },
+        {
+          title: "Earth Day specizal",
+          link: "/",
+          links: [
+            { link: "/", content: "Earth day arrangement" },
+            { link: "/", content: "Pot Flowers" },
+            { link: "/", content: "Container garden" },
+          ],
+        },
+        {
+          title: "Springz festival",
+          link: "/",
+          links: [
+            { link: "/", content: "Totam explicabo" },
+            { link: "/", content: "Ducimus quaerat" },
+            { link: "/", content: "Est blanditiis dolores" },
+            { link: "/", content: "Itaque perspiciatis" },
+          ],
+        },
       ],
     },
   },
@@ -150,7 +181,7 @@ const navList = [
   },
 ];
 
-function Navigation() {
+function Navigation({ mobile, open }) {
   const [subnavOpen, setSubnavOpen] = useState(null);
   const [subnavActive, setSubnavActive] = useState(null);
 
@@ -174,8 +205,10 @@ function Navigation() {
     }
   };
 
+  const classMobile = `${classes["nav"]} ${open ? classes.open : ""}`.trim();
+
   return (
-    <nav className={classes["nav"]}>
+    <nav className={classMobile}>
       <MainWrapper className={`${classes["container"]} ph-m`}>
         <ul className={classes["list"]} tabIndex={1} onBlur={deactivateSubnav}>
           {navList.map((item) => (

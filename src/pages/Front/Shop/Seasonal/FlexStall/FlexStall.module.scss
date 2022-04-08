@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  z-index: 5;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,21 +15,46 @@
   overflow: hidden;
 }
 
+.container {
+  @media only screen and (max-width: static.$bpMedium) {
+    border: 1px solid var(--colorMedium);
+  }
+
+  &:not(:last-child) {
+    @media only screen and (max-width: static.$bpMedium) {
+      border-bottom: none;
+    }
+  }
+}
+
 .stall {
+  position: relative;
   grid-template-columns: 1fr 1fr 1fr;
   color: var(--colorFontDarker);
 
   width: 0;
   min-width: 42rem;
+
+  @media only screen and (max-width: static.$bpSquareBreak) {
+    grid-template-columns: 1fr 1fr;
+    min-width: 30rem;
+  }
 }
 
 .container {
-  header {
-    gap: 0.2rem;
+  .head {
     color: var(--colorFontDark);
+    border: none;
+
+    gap: 0.2rem;
+    width: 100%;
+
+    margin: 0;
+    margin-bottom: 3.2rem;
+    padding: 0;
   }
 
-  header {
+  .head {
     h2 {
       position: absolute;
       bottom: 0;
@@ -45,6 +71,13 @@
       margin: 0;
       padding: 0 0.2em;
       background-color: rgba(#fff, 0.6);
+
+      @media only screen and (max-width: static.$bpMedium) {
+        left: auto;
+        right: 0;
+
+        transform: rotate3d(0, 0, 1, 0deg);
+      }
     }
 
     h6 {
@@ -58,6 +91,10 @@
 
       @media only screen and (max-width: static.$bpLarge) {
         font-weight: 600;
+      }
+
+      @media only screen and (max-width: static.$bpSmall) {
+        white-space: normal;
       }
     }
   }
@@ -76,6 +113,7 @@
 
 .active.container {
   flex: 1 1 500%;
+  z-index: 10;
   cursor: auto;
 
   @media only screen and (max-width: static.$bpLarge) {
