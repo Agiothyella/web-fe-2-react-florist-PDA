@@ -6,7 +6,7 @@ function Address({ social, className: classProp }) {
   const classMerged = `${classes["list"]} ${classProp || ""}`.trim();
 
   return (
-    <ProtrudeCard rCard className={classMerged}>
+    <ProtrudeCard className={classMerged}>
       <p>Agiothyella Flowers</p>
       <address className={classes.addr}>
         <ul>

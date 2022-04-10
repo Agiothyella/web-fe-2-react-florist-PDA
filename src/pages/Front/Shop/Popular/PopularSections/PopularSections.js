@@ -7,8 +7,8 @@ function PopularSections({ className: classProp, flowers, bouquets }) {
 
   return (
     <div className={classMerged}>
-      <Flower flowers={flowers} className={classes.flower} />
       <Bouquet bouquets={bouquets} className={classes.bouquet} />
+      <Flower flowers={flowers} className={classes.flower} />
     </div>
   );
 }

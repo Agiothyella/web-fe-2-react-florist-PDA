@@ -22,8 +22,8 @@ function Contact({ className: classProp }) {
       <MainWrapper>
         <SectionSmall>
           <div className={classes.grid}>
-            <Map className={classes.map} />
             <Address social={social} className={classes.addr} />
+            <Map className={classes.map} />
           </div>
         </SectionSmall>
       </MainWrapper>
