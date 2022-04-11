@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web-fe-2-react-florist-PDA/static/css/main.eeee4a1e.css",
+    "main.css": "/web-fe-2-react-florist-PDA/static/css/main.ff3b123b.css",
     "main.js": "/web-fe-2-react-florist-PDA/static/js/main.bb23273d.js",
     "static/js/787.24c5c883.chunk.js": "/web-fe-2-react-florist-PDA/static/js/787.24c5c883.chunk.js",
     "static/media/season-summer.jpg": "/web-fe-2-react-florist-PDA/static/media/season-summer.63d95908de832e020922.jpg",
@@ -41,12 +41,12 @@
     "static/media/star-outlined.svg": "/web-fe-2-react-florist-PDA/static/media/star-outlined.9069182120a3f4cb542a98d12afb412a.svg",
     "static/media/star.svg": "/web-fe-2-react-florist-PDA/static/media/star.25e3157b0cb3272ac672ab0f485c9c2e.svg",
     "static/media/discover.svg": "/web-fe-2-react-florist-PDA/static/media/discover.85d4c1240cfa0ecdf48295421f271bca.svg",
-    "main.eeee4a1e.css.map": "/web-fe-2-react-florist-PDA/static/css/main.eeee4a1e.css.map",
+    "main.ff3b123b.css.map": "/web-fe-2-react-florist-PDA/static/css/main.ff3b123b.css.map",
     "main.bb23273d.js.map": "/web-fe-2-react-florist-PDA/static/js/main.bb23273d.js.map",
     "787.24c5c883.chunk.js.map": "/web-fe-2-react-florist-PDA/static/js/787.24c5c883.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeee4a1e.css",
+    "static/css/main.ff3b123b.css",
     "static/js/main.bb23273d.js"
   ]
 }
