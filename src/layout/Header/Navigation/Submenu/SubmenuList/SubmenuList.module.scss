@@ -3,7 +3,7 @@
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.8rem;
 
   min-width: max-content;
@@ -56,7 +56,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.2rem;
   width: 100%;
 
