@@ -3,9 +3,12 @@ import MainWrapper from "../../../../components/Container/MainWrapper";
 import classes from "./Specials.module.scss";
 import SpecialSections from "./SpecialSections";
 
-import springImg from "../../../../assets/images/spring-img-2x.jpg";
-import roseImg from "../../../../assets/images/rose-img-2x.jpg";
-import aquaImg from "../../../../assets/images/aquatic-img-2x.jpg";
+import springImg from "../../../../assets/images/spring-img.jpg";
+import roseImg from "../../../../assets/images/rose-img.jpg";
+import aquaImg from "../../../../assets/images/aquatic-img.jpg";
+import springImg2x from "../../../../assets/images/spring-img-2x.jpg";
+import roseImg2x from "../../../../assets/images/rose-img-2x.jpg";
+import aquaImg2x from "../../../../assets/images/aquatic-img-2x.jpg";
 
 import img1 from "../../../../assets/images/data-img/placeholder-1.jpg";
 import img2 from "../../../../assets/images/data-img/placeholder-2.jpg";
@@ -16,6 +19,7 @@ const specialList = [
   {
     title: "spring",
     imgSrc: springImg,
+    imgSrc2x: springImg2x,
     link: "/",
     content: [
       {
@@ -47,6 +51,7 @@ const specialList = [
   {
     title: "roses",
     imgSrc: roseImg,
+    imgSrc2x: roseImg2x,
     link: "/",
     content: [
       {
@@ -78,6 +83,7 @@ const specialList = [
   {
     title: "aquatic",
     imgSrc: aquaImg,
+    imgSrc2x: aquaImg2x,
     link: "/",
     content: [
       {

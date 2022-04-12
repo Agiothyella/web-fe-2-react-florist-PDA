@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LazyLoad from "vanilla-lazyload";
 import SmallContainer from "../../../../../components/Container/SmallContainer";
 import SmallCard from "../../../../../components/Cards/ProductsCard/SmallCard";
 import preventDefault from "../../../../../util/prevent-default";
@@ -6,6 +7,10 @@ import FlexBasis from "../../../../../components/FlexSelection/FlexBasis";
 
 import classes from "./FlexStall.module.scss";
 import styles from "../../../../../styles/variables/_static.scss";
+
+if (!document.lazyLoadInstance) {
+  document.lazyLoadInstance = new LazyLoad();
+}
 
 function FlexStall({ data, style, status, onClick, className: classProp }) {
   const [width, setWidth] = useState(window.innerWidth);
@@ -58,10 +63,11 @@ function FlexStall({ data, style, status, onClick, className: classProp }) {
     <FlexBasis
       className={classMerged}
       style={{
-        backgroundImage: `url(${style.bgImg})`,
+        // backgroundImage: `url(${style.bgImg})`,
         color: style.color,
         backgroundColor: style.color,
       }}
+      bgImg={style.bgImg}
       onClick={clickHandler}
     >
       <header className={classes.head}>

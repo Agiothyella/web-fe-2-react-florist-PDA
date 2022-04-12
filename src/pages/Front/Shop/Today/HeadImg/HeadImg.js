@@ -1,5 +1,6 @@
-import headImg from "../../../../../assets/images/today-img-2x.jpg";
 import classes from "./HeadImg.module.scss";
+import headImg from "../../../../../assets/images/today-img.jpg";
+import headImg2x from "../../../../../assets/images/today-img-2x.jpg";
 
 function HeadImg({ className: classProp }) {
   const classMerged = `${classes.frame} ${classProp || ""}`.trim();
@@ -9,7 +10,15 @@ function HeadImg({ className: classProp }) {
       <a href="/" className={`${classes.btn} btn btn--focus`}>
         Explore More
       </a>
-      <img src={headImg} alt="Woman holding a bouquet" className={classes.img} />{" "}
+
+      <picture>
+        <source data-srcset={`${headImg} 1x, ${headImg2x} 2x`} />
+        <img
+          alt="Woman holding a bouquet"
+          className={`${classes.img} lazy`}
+          data-src={headImg}
+        />
+      </picture>
     </div>
   );
 }

@@ -3,14 +3,21 @@ import ProductsContainer from "../../../../../../components/Container/ProductsCo
 import preventDefault from "../../../../../../util/prevent-default";
 import classes from "./SpecialSection.module.scss";
 
-function SpecialSection({ items, imgSrc, title, link, className: classProp }) {
+function SpecialSection({ items, imgSrc, imgSrc2x, title, link, className: classProp }) {
   const classMerged = `${classes["sub"]} ${classProp || ""}`.trim();
 
   return (
     <section className={classMerged}>
       <h2 className={classes["title"]}>{title}</h2>
       <div className={classes.img}>
-        <img src={imgSrc} alt={title} />
+        <picture>
+          <source data-srcset={`${imgSrc} 1x, ${imgSrc2x} 2x`} />
+          <img
+            alt="Woman holding a bouquet"
+            className={`${classes.img} lazy`}
+            data-src={imgSrc}
+          />
+        </picture>
       </div>
       <ProductsContainer className={classes.container}>
         {items.map((item) => (

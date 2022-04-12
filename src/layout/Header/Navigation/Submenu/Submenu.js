@@ -1,6 +1,7 @@
 import SubmenuList from "./SubmenuList";
 import classes from "./Submenu.module.scss";
-import sideImg from "../../../../assets/images/subnav-img-2x.jpg";
+import sideImg from "../../../../assets/images/subnav-img.jpg";
+import sideImg2x from "../../../../assets/images/subnav-img-2x.jpg";
 
 function Submenu({ menu, className: classProp }) {
   const classMerged = `${classes.container} ${classProp || ""}`.trim();
@@ -19,7 +20,16 @@ function Submenu({ menu, className: classProp }) {
               />
             ))}
         </div>
-        <img src={sideImg} aria-hidden="true" alt="" className={classes.img} />
+
+        <picture>
+          <source data-srcset={`${sideImg} 1x, ${sideImg2x} 2x`} />
+          <img
+            alt=""
+            aria-hidden="true"
+            className={`${classes.img} lazy`}
+            data-src={sideImg}
+          />
+        </picture>
       </div>
     </nav>
   );

@@ -11,6 +11,7 @@ function SpecialSections({ content, className: classProp }) {
           key={item.title}
           items={item.content}
           imgSrc={item.imgSrc}
+          imgSrc2x={item.imgSrc2x}
           title={item.title}
           link={item.link}
         />
