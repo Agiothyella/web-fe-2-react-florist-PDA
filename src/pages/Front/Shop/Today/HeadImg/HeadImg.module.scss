@@ -80,7 +80,7 @@
 
   .btn {
     &:hover {
-      + .img {
+      + picture > .img {
         filter: grayscale(0);
       }
 
