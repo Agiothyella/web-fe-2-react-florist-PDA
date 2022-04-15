@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import LazyLoad from "vanilla-lazyload";
 import classes from "./LazyBouquet.module.scss";
+import lazyLoadInit from "../../../app/lazyLoad/lazy-load-init";
 
 import placeholder from "../../../assets/images/data-img/bouquet-lazy.jpg";
 
-if (!document.lazyLoadInstance) {
-  document.lazyLoadInstance = new LazyLoad();
-}
+lazyLoadInit();
 
 function LazyBouquet({ imgSrc, title, className: classProp }) {
   useEffect(() => {

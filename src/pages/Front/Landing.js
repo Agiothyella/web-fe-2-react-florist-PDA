@@ -1,11 +1,9 @@
-import LazyLoad from "vanilla-lazyload";
 import Shop from "./Shop";
 import Store from "./Store";
+import lazyLoadInit from "../../app/lazyLoad/lazy-load-init";
 import classes from "./Landing.module.scss";
 
-if (!document.lazyLoadInstance) {
-  document.lazyLoadInstance = new LazyLoad();
-}
+lazyLoadInit();
 
 function Main() {
   return (
