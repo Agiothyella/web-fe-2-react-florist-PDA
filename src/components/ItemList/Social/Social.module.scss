@@ -23,7 +23,8 @@
 
   a {
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       svg {
         fill: var(--colorSecondaryShade);
       }

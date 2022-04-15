@@ -4,3 +4,9 @@
 .container {
   border-bottom: 2px solid var(--colorSecondary);
 }
+
+.container {
+  > div {
+    padding-bottom: 2.4rem;
+  }
+}
